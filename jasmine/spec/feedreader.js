@@ -75,6 +75,7 @@ $( function () {
 
     it( 'has a menu that is hidden by default', function () {
 
+      expect( body ).toBeDefined();
       expect( body.classList.contains( 'menu-hidden' ) ).toBe( true );
     } )
 
@@ -88,6 +89,7 @@ $( function () {
 
       /* get menu element */
       let menu = document.querySelector( '.menu-icon-link' );
+      expect( menu ).toBeDefined();
 
       /* isHidden = TRUE if the body element has 'menu-hidden' in it's class
       list and FALSE if not.  */
@@ -123,18 +125,19 @@ $( function () {
       loadFeed( 0, done );
     } );
 
-
-
     /*****
      * This test checks to see if there is at least one entry element within
      * the .feed container.
      *****/
 
     it( 'has at least one entry', function ( done ) {
-      entries = document.querySelectorAll( '.feed > .entry-link' );
-      numEntries = entries.length;
 
+      entries = document.querySelectorAll( '.feed > .entry-link' );
+      expect( entries ).toBeDefined();
+
+      numEntries = entries.length;
       expect( numEntries ).toBeGreaterThan( 0 );
+
       done();
 
     } )
@@ -145,10 +148,13 @@ $( function () {
 
     it( 'has a URL for each entry', function ( done ) {
       /* URL is stored in the href for the entry-link*/
-      let entries = document.querySelectorAll( '.feed > .entry-link' );
-      let numEntries = entries.length;
 
+      entries = document.querySelectorAll( '.feed > .entry-link' );
+      expect( entries ).toBeDefined();
+
+      numEntries = entries.length;
       expect( numEntries ).toBeGreaterThan( 0 );
+
       for ( let i = 0; i < numEntries; i++ ) {
         expect( entries[ i ].href ).toBeDefined();
       };
@@ -160,12 +166,16 @@ $( function () {
      *****/
 
     it( 'has a title for each entry', function ( done ) {
+
       /* title is stored in h2 element.  Look for all h2 elements in the entry
       that have a parent of .entry-link*/
-      let titles = entries.querySelectorAll( ' .entry > h2' );
-      let numTitles = titles.length
 
+      let titles = entries.querySelectorAll( ' .entry > h2' );
+      expect( titles ).toBeDefined();
+
+      let numTitles = titles.length
       expect( numTitles ).toBeGreaterThan( 0 );
+
       for ( let i = 0; i < numTitles; i++ ) {
         expect( titles[ i ].textContent.length ).toBeGreaterThan( 0 );
       };
@@ -190,13 +200,20 @@ $( function () {
 
     it( 'changes feed entries when a new feed is loaded' ),
       function ( done ) {
-        /* get initial feed contents */
-        let entriesBefore = document.querySelectorAll( '.feed > .entry-link > .entry' );
-        /* load next feed in list */
-        loadFeed( 1, done );
-        /* get second feed contents */
-        let entriesAfter = document.querySelectorAll( '.feed > .entry-link > .entry' );
 
+        /* get initial feed contents */
+
+        let entriesBefore = document.querySelectorAll( '.feed > .entry-link > .entry' );
+        expect( entriesBefore ).toBeDefined();
+
+        /* load next feed in list */
+
+        loadFeed( 1, done );
+
+        /* get second feed contents */
+
+        let entriesAfter = document.querySelectorAll( '.feed > .entry-link > .entry' );
+        expect( entriesAfter ).toBeDefined();
         expect( entriesBefore ).not.toBe( entriesAfter );
         done();
       }
