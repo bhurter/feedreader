@@ -37,7 +37,7 @@ $( function () {
         expect( allFeeds[ i ].url ).toBeDefined();
         expect( allFeeds[ i ].url.length ).not.toBe( 0 );
       }
-    } )
+    } );
 
     /*****
      * This test loops through each feed in the allFeeds object and ensures
@@ -49,7 +49,7 @@ $( function () {
         expect( allFeeds[ i ].name ).toBeDefined();
         expect( allFeeds[ i ].name.length ).not.toBe( 0 );
       }
-    } )
+    } );
   } );
 
   /*****************************************************************************
@@ -77,7 +77,7 @@ $( function () {
 
       expect( body ).toBeDefined();
       expect( body.classList.contains( 'menu-hidden' ) ).toBe( true );
-    } )
+    } );
 
     /*****
      * This test ensures the menu changes visibilty when the menu icon
@@ -106,7 +106,7 @@ $( function () {
       matches original state */
       menu.click();
       expect( body.classList.contains( 'menu-hidden' ) ).toBe( isHidden );
-    } )
+    } );
   } );
 
   /*****************************************************************************
@@ -140,7 +140,7 @@ $( function () {
 
       done();
 
-    } )
+    } );
 
     /*****
      * This test checks to see if each entry link has a URL
@@ -157,9 +157,9 @@ $( function () {
 
       for ( let i = 0; i < numEntries; i++ ) {
         expect( entries[ i ].href ).toBeDefined();
-      };
+      }
       done();
-    } )
+    } );
 
     /*****
      * This test checks to see if each entry link has a title
@@ -173,14 +173,14 @@ $( function () {
       let titles = document.querySelectorAll( '.feed > .entry-link > .entry > h2' );
       expect( titles ).toBeDefined();
 
-      let numTitles = titles.length
+      let numTitles = titles.length;
       expect( numTitles ).toBeGreaterThan( 0 );
 
       for ( let i = 0; i < numTitles; i++ ) {
         expect( titles[ i ].textContent.length ).toBeGreaterThan( 0 );
-      };
+      }
       done();
-    } )
+    } );
   } );
 
   /*****************************************************************************
@@ -217,7 +217,7 @@ $( function () {
         expect( entriesBefore ).not.toBe( entriesAfter );
 
         done();
-      } )
+      } );
   } );
 
 }() );
