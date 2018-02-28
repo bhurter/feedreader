@@ -49,10 +49,8 @@ This project focuses on implementing Jasmine tests for the feedreader applicatio
 ### Instructions
   - Click to [run the feedreader test](https://bhurter.github.io/feedreader/ "Feed Reader Jasmine Tests")
   - Scroll to the bottom of the screen to view the tests
-  - Successful tests look like this:
-      ![Successful test](/img/All-tests-passed.png "All tests passed")
-  - Failed tests look like this:
-      ![Failed test](/img/Example-of-failed-test.png "A failed test")
+  - Successful tests  are green and look like this:  ![Successful test](/img/All-tests-passed.png "All tests passed")
+  - Failed tests are red and look like this:  ![Failed test](/img/Example-of-failed-test.png "A failed test")
   
 
 ## Author
