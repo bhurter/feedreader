@@ -46,4 +46,18 @@ This project focuses on implementing Jasmine tests for the feedreader applicatio
 #### New Feed Selection
 1. changes feed entries when a new feed is loaded
 
-## 
+### Instructions
+  - Click to [run the feedreader test]
+  - Successful tests look like this:
+  
+  - Failed tests look like this:
+  
+
+## Author
+
+  - Beth Hurter
+
+## Acknowledgments
+
+  - Udacity provided the actual feedreader application.  This project creates the Jasmine tests.
+
