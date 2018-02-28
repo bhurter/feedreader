@@ -170,7 +170,7 @@ $( function () {
       /* title is stored in h2 element.  Look for all h2 elements in the entry
       that have a parent of .entry-link*/
 
-      let titles = entries.querySelectorAll( ' .entry > h2' );
+      let titles = document.querySelectorAll( '.feed > .entry-link > .entry > h2' );
       expect( titles ).toBeDefined();
 
       let numTitles = titles.length
@@ -198,7 +198,7 @@ $( function () {
      * this test compares two feed entries.  It passes if they are different
      *****/
 
-    it( 'changes feed entries when a new feed is loaded' ),
+    it( 'changes feed entries when a new feed is loaded',
       function ( done ) {
 
         /* get initial feed contents */
@@ -214,9 +214,10 @@ $( function () {
 
         let entriesAfter = document.querySelectorAll( '.feed > .entry-link > .entry' );
         expect( entriesAfter ).toBeDefined();
-        expect( entriesBefore ).not.toBe( entriesAfter );
+        expect( entriesBefore ).toBe( entriesAfter );
+
         done();
-      }
+      } )
   } );
 
 }() );
