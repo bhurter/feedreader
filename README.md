@@ -2,6 +2,9 @@
 
 This project focuses on implementing Jasmine tests for the feedreader application.
 
+## What is Jasmine?
+
+According to the [Jasmine github site](https://jasmine.github.io/ "jasmine.github.io"), Jasmine is "a behavior-driven development framework for testing JavaScript code. It does not depend on any other JavaScript frameworks. It does not require a DOM. And it has a clean, obvious syntax so that you can easily write tests."
 
 ## Project Requirements
 
