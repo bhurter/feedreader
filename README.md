@@ -47,9 +47,9 @@ This project focuses on implementing Jasmine tests for the feedreader applicatio
 1. changes feed entries when a new feed is loaded
 
 ### Instructions
-  - Click to [run the feedreader test]
+  - Click to [run the feedreader test](https://bhurter.github.io/feedreader/ "Feed Reader Jasmine Tests")
   - Successful tests look like this:
-  
+  ![Successful test](https://github.com/bhurter/feedreader/img/All-tests-passed.png "All tests passed")
   - Failed tests look like this:
   
 
