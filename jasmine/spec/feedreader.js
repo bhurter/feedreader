@@ -214,7 +214,7 @@ $( function () {
 
         let entriesAfter = document.querySelectorAll( '.feed > .entry-link > .entry' );
         expect( entriesAfter ).toBeDefined();
-        expect( entriesBefore ).toBe( entriesAfter );
+        expect( entriesBefore ).not.toBe( entriesAfter );
 
         done();
       } )
