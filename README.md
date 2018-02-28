@@ -29,3 +29,21 @@ This project focuses on implementing Jasmine tests for the feedreader applicatio
 19. **COMPLETE -** Implement error handling for undefined variables and out-of-bound array access.
 20. **COMPLETE -** When complete - all of your tests should pass.
 21. **COMPLETE -** Write a README file detailing all steps required to successfully run the application. If you have added additional tests (for Udacious Test Coverage),  provide documentation for what these future features are and what the tests are checking for.
+
+## Test directory
+
+#### RSS Feeds
+1. has all feeds defined
+2. has a URL that is defined and not empty for each feed
+3. have a name that is defined and not empty
+#### The menu
+1. has a menu that is hidden by default
+2. changes visibility when menu icon is clicked
+#### Initial Entries
+1. has at least one entry
+2. has a URL for each entry - *added test to check that each feed entry has a URL*
+3. has a title for each entry - *added test to check that each feed entry has a title*
+#### New Feed Selection
+1. changes feed entries when a new feed is loaded
+
+## 
