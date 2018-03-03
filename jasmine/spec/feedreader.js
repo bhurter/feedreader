@@ -211,7 +211,7 @@ $( function () {
     var entriesBefore;
     var entriesAfter;
 
-    /* get feed contents for initial feed */
+    /* get feed contents for initial feed - we will compare the html*/
     beforeEach( function ( done ) {
       loadFeed( 0, function () {
         entriesBefore = $( '.feed' ).html();
